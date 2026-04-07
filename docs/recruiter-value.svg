@@ -1,0 +1,77 @@
+<svg width="1400" height="680" viewBox="0 0 1400 680" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="62" y1="40" x2="1342" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6F4EE"/>
+      <stop offset="1" stop-color="#E9EEF5"/>
+    </linearGradient>
+    <linearGradient id="warm" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FDE68A"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="cool" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#BFDBFE"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#BBF7D0"/>
+      <stop offset="1" stop-color="#16A34A"/>
+    </linearGradient>
+    <linearGradient id="rose" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FDA4AF"/>
+      <stop offset="1" stop-color="#E11D48"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="680" rx="32" fill="url(#bg)"/>
+  <text x="86" y="116" fill="#0F172A" font-size="54" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Why This Project Has Strong Academic and Recruiter Value</text>
+  <text x="86" y="160" fill="#334155" font-size="24" font-family="Segoe UI, Arial, sans-serif">cub3D is more than a graphics assignment. It is a compact systems project that combines math, parsing, optimization, and user interaction.</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="86" y="220" width="286" height="346" rx="28" fill="#FFFFFF" stroke="#D7DEE9" stroke-width="2"/>
+    <circle cx="138" cy="274" r="28" fill="url(#warm)"/>
+    <text x="182" y="283" fill="#0F172A" font-size="28" font-weight="700">Graphics Math</text>
+    <text x="118" y="334" fill="#334155" font-size="20">Projection math, trigonometry,</text>
+    <text x="118" y="362" fill="#334155" font-size="20">vector movement, and fish-eye</text>
+    <text x="118" y="390" fill="#334155" font-size="20">correction turn formulas into an</text>
+    <text x="118" y="418" fill="#334155" font-size="20">interactive visual result.</text>
+    <rect x="118" y="458" width="170" height="10" rx="5" fill="#FDE68A"/>
+    <rect x="118" y="484" width="220" height="10" rx="5" fill="#F59E0B"/>
+    <rect x="118" y="510" width="192" height="10" rx="5" fill="#FCD34D"/>
+
+    <rect x="406" y="220" width="286" height="346" rx="28" fill="#FFFFFF" stroke="#D7DEE9" stroke-width="2"/>
+    <circle cx="458" cy="274" r="28" fill="url(#cool)"/>
+    <text x="502" y="283" fill="#0F172A" font-size="28" font-weight="700">Parser Discipline</text>
+    <text x="438" y="334" fill="#334155" font-size="20">The project validates a custom</text>
+    <text x="438" y="362" fill="#334155" font-size="20">file format, rejects malformed</text>
+    <text x="438" y="390" fill="#334155" font-size="20">maps, normalizes uneven rows,</text>
+    <text x="438" y="418" fill="#334155" font-size="20">and tracks doors and spawns.</text>
+    <rect x="438" y="458" width="214" height="10" rx="5" fill="#BFDBFE"/>
+    <rect x="438" y="484" width="182" height="10" rx="5" fill="#60A5FA"/>
+    <rect x="438" y="510" width="236" height="10" rx="5" fill="#2563EB"/>
+
+    <rect x="726" y="220" width="286" height="346" rx="28" fill="#FFFFFF" stroke="#D7DEE9" stroke-width="2"/>
+    <circle cx="778" cy="274" r="28" fill="url(#mint)"/>
+    <text x="822" y="283" fill="#0F172A" font-size="28" font-weight="700">Systems Thinking</text>
+    <text x="758" y="334" fill="#334155" font-size="20">Manual memory management,</text>
+    <text x="758" y="362" fill="#334155" font-size="20">resource cleanup, event hooks,</text>
+    <text x="758" y="390" fill="#334155" font-size="20">image buffers, and low-level</text>
+    <text x="758" y="418" fill="#334155" font-size="20">C data structures all matter.</text>
+    <rect x="758" y="458" width="188" height="10" rx="5" fill="#BBF7D0"/>
+    <rect x="758" y="484" width="228" height="10" rx="5" fill="#4ADE80"/>
+    <rect x="758" y="510" width="170" height="10" rx="5" fill="#16A34A"/>
+
+    <rect x="1046" y="220" width="268" height="346" rx="28" fill="#FFFFFF" stroke="#D7DEE9" stroke-width="2"/>
+    <circle cx="1098" cy="274" r="28" fill="url(#rose)"/>
+    <text x="1142" y="283" fill="#0F172A" font-size="28" font-weight="700">Optimization Mindset</text>
+    <text x="1078" y="334" fill="#334155" font-size="20">DDA traversal, texture-column</text>
+    <text x="1078" y="362" fill="#334155" font-size="20">sampling, no per-frame heap</text>
+    <text x="1078" y="390" fill="#334155" font-size="20">allocations, and direct writes to</text>
+    <text x="1078" y="418" fill="#334155" font-size="20">an image buffer keep it lean.</text>
+    <rect x="1078" y="458" width="176" height="10" rx="5" fill="#FDA4AF"/>
+    <rect x="1078" y="484" width="206" height="10" rx="5" fill="#FB7185"/>
+    <rect x="1078" y="510" width="152" height="10" rx="5" fill="#E11D48"/>
+  </g>
+
+  <rect x="86" y="598" width="1228" height="38" rx="19" fill="#FFFFFF" stroke="#D7DEE9"/>
+  <text x="116" y="623" fill="#334155" font-size="20" font-family="Segoe UI, Arial, sans-serif">This is the kind of project that demonstrates algorithmic reasoning, debugging resilience, performance awareness, and comfort with low-level implementation details.</text>
+</svg>

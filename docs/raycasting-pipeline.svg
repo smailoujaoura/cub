@@ -1,0 +1,91 @@
+<svg width="1400" height="820" viewBox="0 0 1400 820" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="88" y1="78" x2="1298" y2="748" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#121826"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#162134"/>
+      <stop offset="1" stop-color="#101828"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#F59E0B"/>
+      <stop offset="1" stop-color="#FB7185"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="820" rx="32" fill="url(#bg)"/>
+  <text x="92" y="118" fill="#F8FAFC" font-size="56" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Ray-Casting Pipeline</text>
+  <text x="92" y="162" fill="#94A3B8" font-size="24" font-family="Segoe UI, Arial, sans-serif">How this repository turns a .cub file into a navigable, textured 3D scene.</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="92" y="218" width="360" height="186" rx="24" fill="url(#card)" stroke="#263347" stroke-width="2"/>
+    <rect x="92" y="218" width="360" height="10" rx="5" fill="url(#accent)"/>
+    <text x="122" y="268" fill="#F8FAFC" font-size="30" font-weight="700">1. .cub Configuration</text>
+    <text x="122" y="308" fill="#CBD5E1" font-size="20">Texture paths, RGB colors, player spawn,</text>
+    <text x="122" y="336" fill="#CBD5E1" font-size="20">map rows, and special tiles are loaded from</text>
+    <text x="122" y="364" fill="#CBD5E1" font-size="20">a custom text format.</text>
+    <rect x="122" y="388" width="256" height="8" rx="4" fill="#334155"/>
+    <rect x="122" y="388" width="170" height="8" rx="4" fill="#F59E0B"/>
+
+    <rect x="520" y="218" width="360" height="186" rx="24" fill="url(#card)" stroke="#263347" stroke-width="2"/>
+    <rect x="520" y="218" width="360" height="10" rx="5" fill="url(#accent)"/>
+    <text x="550" y="268" fill="#F8FAFC" font-size="30" font-weight="700">2. Parsing and Validation</text>
+    <text x="550" y="308" fill="#CBD5E1" font-size="20">Rows are normalized, spaces are preserved,</text>
+    <text x="550" y="336" fill="#CBD5E1" font-size="20">and horizontal / vertical enclosure checks</text>
+    <text x="550" y="364" fill="#CBD5E1" font-size="20">reject malformed maps early.</text>
+    <rect x="550" y="388" width="274" height="8" rx="4" fill="#334155"/>
+    <rect x="550" y="388" width="214" height="8" rx="4" fill="#22C55E"/>
+
+    <rect x="948" y="218" width="360" height="186" rx="24" fill="url(#card)" stroke="#263347" stroke-width="2"/>
+    <rect x="948" y="218" width="360" height="10" rx="5" fill="url(#accent)"/>
+    <text x="978" y="268" fill="#F8FAFC" font-size="30" font-weight="700">3. World State Setup</text>
+    <text x="978" y="308" fill="#CBD5E1" font-size="20">Player position, facing angle, texture slots,</text>
+    <text x="978" y="336" fill="#CBD5E1" font-size="20">door metadata, and image buffers are</text>
+    <text x="978" y="364" fill="#CBD5E1" font-size="20">initialized before the main loop starts.</text>
+    <rect x="978" y="388" width="250" height="8" rx="4" fill="#334155"/>
+    <rect x="978" y="388" width="186" height="8" rx="4" fill="#60A5FA"/>
+
+    <rect x="92" y="484" width="360" height="210" rx="24" fill="url(#card)" stroke="#263347" stroke-width="2"/>
+    <rect x="92" y="484" width="360" height="10" rx="5" fill="url(#accent)"/>
+    <text x="122" y="534" fill="#F8FAFC" font-size="30" font-weight="700">4. DDA Per Column</text>
+    <text x="122" y="574" fill="#CBD5E1" font-size="20">Each screen column casts one ray. The DDA</text>
+    <text x="122" y="602" fill="#CBD5E1" font-size="20">loop steps across grid boundaries until it hits</text>
+    <text x="122" y="630" fill="#CBD5E1" font-size="20">a wall or a door tile.</text>
+    <text x="122" y="666" fill="#F59E0B" font-size="18" font-weight="700">Includes fish-eye correction before projection.</text>
+
+    <rect x="520" y="484" width="360" height="210" rx="24" fill="url(#card)" stroke="#263347" stroke-width="2"/>
+    <rect x="520" y="484" width="360" height="10" rx="5" fill="url(#accent)"/>
+    <text x="550" y="534" fill="#F8FAFC" font-size="30" font-weight="700">5. Texture Sampling</text>
+    <text x="550" y="574" fill="#CBD5E1" font-size="20">The engine picks a texture based on hit side</text>
+    <text x="550" y="602" fill="#CBD5E1" font-size="20">and direction, then samples one texture</text>
+    <text x="550" y="630" fill="#CBD5E1" font-size="20">column across the projected wall slice.</text>
+    <text x="550" y="666" fill="#F59E0B" font-size="18" font-weight="700">Special tiles reuse animated frames.</text>
+
+    <rect x="948" y="484" width="360" height="210" rx="24" fill="url(#card)" stroke="#263347" stroke-width="2"/>
+    <rect x="948" y="484" width="360" height="10" rx="5" fill="url(#accent)"/>
+    <text x="978" y="534" fill="#F8FAFC" font-size="30" font-weight="700">6. Frame, Input, and HUD</text>
+    <text x="978" y="574" fill="#CBD5E1" font-size="20">Keyboard, mouse look, door interaction,</text>
+    <text x="978" y="602" fill="#CBD5E1" font-size="20">ceiling / floor fill, framebuffer output, and</text>
+    <text x="978" y="630" fill="#CBD5E1" font-size="20">the minimap all meet in the render loop.</text>
+    <text x="978" y="666" fill="#F59E0B" font-size="18" font-weight="700">Input -> update -> draw -> present.</text>
+  </g>
+
+  <g stroke="#F59E0B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M452 310H504"/>
+    <path d="M478 292L504 310L478 328"/>
+    <path d="M880 310H932"/>
+    <path d="M906 292L932 310L906 328"/>
+    <path d="M1128 404V444H272V472"/>
+    <path d="M1108 446L1128 472L1148 446"/>
+    <path d="M452 590H504"/>
+    <path d="M478 572L504 590L478 608"/>
+    <path d="M880 590H932"/>
+    <path d="M906 572L932 590L906 608"/>
+  </g>
+
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="92" y="734" width="1216" height="42" rx="21" fill="#0F172A" stroke="#263347"/>
+    <text x="126" y="761" fill="#CBD5E1" font-size="20">Key implementation themes: parsing rigor, trigonometry, grid traversal, texture sampling, state management, and real-time rendering.</text>
+  </g>
+</svg>
